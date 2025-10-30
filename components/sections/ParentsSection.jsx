@@ -6,7 +6,7 @@ import { quinceMainData } from "@/components/sections/data/main-data";
 
 export default function ParentsSection() {
   //const { parents } = weddingData;
-  const { brideParents, groomParents, parents } = quinceMainData.event;
+  const { brideParents, groomParents, parents, godparents } = quinceMainData.event;
   const sectionRef = useRef(null);
   
   // Estados para animaciones escalonadas
@@ -115,13 +115,13 @@ export default function ParentsSection() {
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-center justify-center space-x-2">
-                        <span className="text-lg">👨</span>
+                        <span className="text-lg">👩</span>
                         <p className="text-xl font-medium text-glow">
                           {brideParents.mother}
                         </p>
                       </div>
                       <div className="flex items-center justify-center space-x-2">
-                        <span className="text-lg">👩</span>
+                        <span className="text-lg">👨</span>
                         <p className="text-xl font-medium text-glow">
                           {brideParents.father}
                         </p>
@@ -142,15 +142,43 @@ export default function ParentsSection() {
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-center justify-center space-x-2">
-                        <span className="text-lg">🤵</span>
+                        <span className="text-lg"> 👰</span>
                         <p className="text-xl font-medium text-glow">
                           {groomParents.mother}
                         </p>
                       </div>
                       <div className="flex items-center justify-center space-x-2">
-                        <span className="text-lg">👰</span>
+                        <span className="text-lg">🤵</span>
                         <p className="text-xl font-medium text-glow">
                           {groomParents.father}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                {/* Card de Padrinos */}
+                <div className={`${getAnimationClass(godparentsVisible, 'slide-in-right', 'delay-600')} parent-card`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                    <div className="flex items-center justify-center mb-4">
+                      <span className="text-3xl animate-heart-beat mr-2">🤝</span>
+                      <h3 className={godparentsVisible ? completeClass : basicClass}>
+                        Padrinos de Velación 
+                      </h3>
+                      <span className="text-3xl animate-heart-beat ml-2">🤝</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="text-lg">🤵</span>
+                        <p className="text-xl font-medium text-glow">
+                          {godparents.father}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="text-lg">👰</span>
+                        <p className="text-xl font-medium text-glow">
+                          {godparents.mother}
                         </p>
                       </div>
                     </div>
