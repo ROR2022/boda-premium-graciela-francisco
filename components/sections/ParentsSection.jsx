@@ -172,13 +172,13 @@ export default function ParentsSection() {
                       <div className="flex items-center justify-center space-x-2">
                         <span className="text-lg">🤵</span>
                         <p className="text-xl font-medium text-glow">
-                          {godparents.father}
+                          {godparents.godfather}
                         </p>
                       </div>
                       <div className="flex items-center justify-center space-x-2">
                         <span className="text-lg">👰</span>
                         <p className="text-xl font-medium text-glow">
-                          {godparents.mother}
+                          {godparents.godmother}
                         </p>
                       </div>
                     </div>
